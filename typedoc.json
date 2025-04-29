@@ -1,0 +1,19 @@
+{
+	"entryPoints": ["src/index.ts"],
+	"out": "docs",
+	"theme": "default",
+	"name": "propforge",
+	"readme": "README.md",
+	"excludePrivate": true,
+	"excludeProtected": true,
+	"excludeExternals": true,
+	"includeVersion": true,
+	"hideGenerator": true,
+	"cname": "propforge.github.io",
+	"githubPages": true,
+	"navigation": {
+		"includeCategories": true,
+		"includeGroups": true
+	}
+	// "media": "docs/assets"
+}

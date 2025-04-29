@@ -1,0 +1,92 @@
+{
+	"name": "propforge",
+	"version": "1.2.0",
+	"description": "A TypeScript library for object property manipulation and templating with transformers",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./types": {
+			"types": "./dist/types/index.d.ts"
+		}
+	},
+	"typesVersions": {
+		"*": {
+			"types": ["./dist/types/index.d.ts"]
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage",
+		"benchmark": "vitest bench",
+		"benchmark:watch": "vitest bench --watch",
+		"format": "biome format --write .",
+		"check": "biome check .",
+		"fix": "biome check --write --unsafe .",
+		"prepare": "husky",
+		"commit": "cz",
+		"commit:retry": "git commit --amend --no-edit",
+		"commit:fix": "git commit --amend -m",
+		"docs": "typedoc",
+		"docs:watch": "typedoc --watch",
+		"prepublishOnly": "npm run build && npm run test",
+		"validate": "npm run check && npm run test",
+		"release:dry": "semantic-release --dry-run",
+		"release": "semantic-release"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"keywords": [
+		"template",
+		"object",
+		"property",
+		"manipulation",
+		"typescript",
+		"propforge",
+		"path",
+		"transformer",
+		"string",
+		"interpolation"
+	],
+	"author": "Flavio Ever",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/flavio-ever/propforge.git"
+	},
+	"bugs": {
+		"url": "https://github.com/flavio-ever/propforge/issues"
+	},
+	"homepage": "https://flavio-ever.github.io/propforge/#readme",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@commitlint/cli": "^19.2.1",
+		"@commitlint/config-conventional": "^19.1.0",
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/npm": "^12.0.1",
+		"@types/node": "^20.17.32",
+		"@vitest/coverage-v8": "^1.3.1",
+		"commitizen": "^4.3.1",
+		"cz-conventional-changelog": "^3.3.0",
+		"gh-pages": "^6.1.1",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"ts-node": "^10.9.2",
+		"typedoc": "^0.25.8",
+		"typescript": "^5.3.3",
+		"vitest": "^1.6.1"
+	},
+	"files": ["dist", "README.md", "LICENSE"],
+	"engines": {
+		"node": ">=18.0.0"
+	}
+}
