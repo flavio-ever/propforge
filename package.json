@@ -1,6 +1,6 @@
 {
 	"name": "propforge",
-	"version": "1.0.0",
+	"version": "1.2.0",
 	"description": "A TypeScript library for object property manipulation and templating with transformers",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -15,9 +15,7 @@
 	},
 	"typesVersions": {
 		"*": {
-			"types": [
-				"./dist/types/index.d.ts"
-			]
+			"types": ["./dist/types/index.d.ts"]
 		}
 	},
 	"scripts": {
@@ -87,11 +85,7 @@
 		"typescript": "^5.3.3",
 		"vitest": "^1.6.1"
 	},
-	"files": [
-		"dist",
-		"README.md",
-		"LICENSE"
-	],
+	"files": ["dist", "README.md", "LICENSE"],
 	"engines": {
 		"node": ">=18.0.0"
 	}
