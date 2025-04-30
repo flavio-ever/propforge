@@ -20,6 +20,5 @@
 			}
 		]
 	],
-	"preset": "conventionalcommits",
-	"firstRelease": true
+	"preset": "conventionalcommits"
 }
